@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晨跃智能科技有限公司</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 引入jsCode.js -->
+    
+</head>
+<body>
+    <!-- 系统头部 -->
+    <div class="header">
+        <h1>晨跃智能科技有限公司</h1>
+        <button class="logout-btn">退出登录</button>
+    </div>
+
+    <!-- 搜索表单区域 -->
+    <div class="search-form">
+        <div class="form-group">
+            <label for="id">设备编号</label>
+            <input type="text" id="id" placeholder="请输入设备编号">
+        </div>
+        
+        <div class="form-group">
+            <label for="name">设备名称</label>
+            <select id="name">
+                <option value="">请选择</option>
+                <option value="儿童">儿童健康手表</option>
+                <option value="老年人">老年人健康手表</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="state">设备状态</label>
+            <select id="state">
+                <option value="">请选择</option>
+                <option value="yes">激活</option>
+                <option value="no">未激活</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <button class="query-btn">查询</button>
+            <button class="clear-btn">清空</button>
+        </div>
+    </div>
+
+    <!-- 数据表格区域 -->
+    <form action="#">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>设备编号</th>
+                        <th>设备名称</th>
+                        <th>设备照片</th>
+                        <th>设备状态</th>
+                        <th>日期</th>
+                        <th>最后操作时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>371421</td>
+                        <td>老年人健康手表</td>
+                        <td><img src="https://img0.baidu.com/it/u=2868866850,1066302867&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500" alt="头像" class="device-img"></td>
+                        <td>激活</td>
+                        <td>2008-12-18</td>
+                        <td>2023-07-22 12:05:20</td>
+                        <td class="operation">
+                            <a href="#">编辑</a>
+                            <a href="#">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>371422</td>
+                        <td>儿童健康监护手表</td>
+                        <td><img src="https://img2.baidu.com/it/u=297318318,2770850711&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500" alt="头像" class="device-img"></td>
+                        <td>未激活</td>
+                        <td>2015-07-22</td>
+                        <td>2022-07-22 15:00:00</td>
+                        <td class="operation">
+                            <a href="#">编辑</a>
+                            <a href="#">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+
+    <!-- 页脚区域 -->
+    <div class="footer">
+        <p>晨跃智能科技有限公司</p>
+        <p>版权所有Copyright 2006-2024  All Rights Reserved</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('.device-img').forEach(img => {
+            img.addEventListener('click', function() {
+                this.classList.toggle('zoom-in');
+            });
+        });
+    </script>
+    <script src="jaCode.js"></script>
+</body>
+</html>
